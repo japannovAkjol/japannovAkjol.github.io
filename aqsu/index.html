@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AQSU WASH — автомойка в Алматы по записи</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fff;--soft:#f4f7fb;--line:#e3e9f1;--txt:#0f1826;--mut:#5f6f85;--acc:#0a84ff;--acc-d:#0062c4;--ok:#16a34a}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:Inter,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.demo{background:#0f1826;color:#9fb0c6;padding:7px 20px;text-align:center;font-size:12px}
+
+nav{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nv{max-width:1140px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.lg{display:flex;align-items:center;gap:9px;font-weight:800;font-size:19px;letter-spacing:-.4px}
+.lg small{font-weight:600;font-size:11px;color:var(--acc);letter-spacing:1.6px;align-self:center}
+.nl{display:flex;gap:25px;font-size:14.5px;font-weight:500;color:var(--mut)}
+.nl a{color:inherit;text-decoration:none}.nl a:hover{color:var(--acc)}
+.ncta{background:var(--acc);color:#fff;padding:10px 19px;border-radius:9px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+@media(max-width:880px){.nl{display:none}}
+
+.hero{padding:62px 0 70px;background:linear-gradient(170deg,#f0f7ff,#fff 70%);position:relative;overflow:hidden}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center;position:relative}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:99px;font-size:13px;font-weight:600;color:var(--mut);margin-bottom:22px;box-shadow:0 2px 10px rgba(15,24,38,.05)}
+.pd{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+h1{font-size:clamp(33px,5vw,54px);line-height:1.06;font-weight:800;letter-spacing:-1.6px;margin-bottom:18px}
+h1 i{font-style:normal;color:var(--acc)}
+.hs{font-size:17px;line-height:1.62;color:var(--mut);max-width:490px;margin-bottom:28px}
+.hb{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:30px}
+.bp{background:var(--acc);color:#fff;padding:15px 27px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 5px 18px rgba(10,132,255,.28);transition:transform .15s}
+.bp:hover{transform:translateY(-2px)}
+.bs{background:#fff;border:1px solid var(--line);color:var(--txt);padding:15px 25px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none}
+.hf{display:flex;gap:11px;flex-wrap:wrap}
+.hfi{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--txt);background:#fff;border:1px solid var(--line);padding:8px 13px;border-radius:8px}
+@media(max-width:880px){.hg{grid-template-columns:1fr;gap:34px}.hero{padding:40px 0 50px}}
+
+.slot-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 18px 46px rgba(15,24,38,.1)}
+.sc-h{font-size:15.5px;font-weight:700;margin-bottom:5px}
+.sc-s{font-size:13.3px;color:var(--mut);margin-bottom:18px}
+.days{display:flex;gap:7px;margin-bottom:17px}
+.day{flex:1;text-align:center;padding:9px 4px;border:1px solid var(--line);border-radius:9px;cursor:pointer;transition:all .18s}
+.day:hover{border-color:var(--acc)}
+.day.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.day b{display:block;font-size:14.5px;font-weight:700}
+.day span{font-size:10.5px;opacity:.75}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:18px}
+.sl{padding:10px 2px;text-align:center;border:1px solid var(--line);border-radius:8px;font-size:13.5px;font-weight:600;cursor:pointer;transition:all .18s}
+.sl:hover{border-color:var(--acc);color:var(--acc)}
+.sl.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.sl.off{opacity:.33;text-decoration:line-through;cursor:not-allowed}
+.sc-b{width:100%;background:var(--acc);color:#fff;border:none;padding:14px;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+.sc-n{font-size:11.5px;color:var(--mut);text-align:center;margin-top:11px;line-height:1.5}
+
+section{padding:78px 0}
+.sh{text-align:center;max-width:620px;margin:0 auto 44px}
+.eb{font-size:12px;letter-spacing:2.2px;color:var(--acc);text-transform:uppercase;font-weight:700;margin-bottom:11px}
+h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-1px;line-height:1.14;margin-bottom:13px}
+.sh p{color:var(--mut);font-size:16px;line-height:1.6}
+
+.prc{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:18px;align-items:start}
+.pc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:27px;position:relative;transition:box-shadow .25s,transform .25s}
+.pc:hover{box-shadow:0 14px 36px rgba(15,24,38,.09);transform:translateY(-3px)}
+.pc.best{border:2px solid var(--acc);box-shadow:0 14px 40px rgba(10,132,255,.15)}
+.bdg{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--acc);color:#fff;font-size:11.5px;font-weight:700;padding:5px 15px;border-radius:99px;white-space:nowrap}
+.pc h3{font-size:18.5px;font-weight:700;margin-bottom:6px}
+.pc>p{font-size:13.4px;color:var(--mut);margin-bottom:17px}
+.pn{font-size:33px;font-weight:800;letter-spacing:-1.3px;margin-bottom:4px}
+.pn small{font-size:14px;color:var(--mut);font-weight:500}
+.pt{font-size:13px;color:var(--mut);padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+.pc ul{list-style:none;margin-bottom:22px}
+.pc li{font-size:14px;padding:7px 0 7px 25px;position:relative;line-height:1.45;color:#2b3a4f}
+.pc li::before{content:'';position:absolute;left:1px;top:13px;width:13px;height:7px;border-left:2px solid var(--ok);border-bottom:2px solid var(--ok);transform:rotate(-45deg)}
+.pb{display:block;text-align:center;padding:13px;border-radius:10px;font-weight:700;font-size:14.5px;text-decoration:none}
+.pb1{background:var(--acc);color:#fff}
+.pb2{border:1px solid var(--line);color:var(--txt)}
+.cls{text-align:center;color:var(--mut);font-size:14px;margin-top:26px}
+
+.why{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.wg{display:grid;grid-template-columns:repeat(auto-fit,minmax(246px,1fr));gap:17px}
+.wc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:25px}
+.wi{width:42px;height:42px;border-radius:11px;background:#e8f3ff;display:flex;align-items:center;justify-content:center;margin-bottom:15px}
+.wc h4{font-size:16.5px;font-weight:700;margin-bottom:8px}
+.wc p{font-size:14px;color:var(--mut);line-height:1.58}
+
+.loy{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.stamps{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:22px}
+.st{aspect-ratio:1;border-radius:11px;border:2px dashed var(--line);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:#c2cedd;background:#fff}
+.st.done{border:2px solid var(--ok);background:#f0fdf4;color:var(--ok)}
+.st.free{border:2px solid var(--acc);background:var(--acc);color:#fff;font-size:12.5px;text-align:center;line-height:1.2;padding:4px}
+@media(max-width:860px){.loy{grid-template-columns:1fr;gap:30px}}
+
+.fs{background:var(--soft);border-top:1px solid var(--line)}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start}
+.fi h2{margin-bottom:15px}
+.fi>p{color:var(--mut);font-size:15.5px;line-height:1.64;margin-bottom:25px}
+.fr{display:flex;gap:12px;margin-bottom:15px}
+.fr svg{flex-shrink:0;margin-top:2px}
+.fr b{display:block;font-size:14.8px;margin-bottom:2px}
+.fr span{font-size:14px;color:var(--mut);line-height:1.5}
+form{background:#fff;border:1px solid var(--line);border-radius:17px;padding:29px;box-shadow:0 12px 34px rgba(15,24,38,.07)}
+.fl{margin-bottom:16px}
+label{display:block;font-size:13.2px;font-weight:600;margin-bottom:6px}
+input,select{width:100%;background:#fafcfe;border:1px solid var(--line);border-radius:9px;padding:13px 14px;font-size:15px;font-family:inherit;color:var(--txt)}
+input:focus,select:focus{outline:none;border-color:var(--acc);background:#fff}
+.sb{width:100%;background:var(--acc);color:#fff;border:none;padding:15px;border-radius:10px;font-weight:700;font-size:15.5px;cursor:pointer;font-family:inherit}
+.nt{font-size:11.8px;color:var(--mut);text-align:center;margin-top:12px;line-height:1.5}
+.okm{display:none;background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;padding:14px;border-radius:10px;font-size:14.3px;margin-top:14px;line-height:1.5}
+@media(max-width:860px){.fg{grid-template-columns:1fr;gap:32px}}
+
+footer{padding:40px 0 34px;text-align:center;border-top:1px solid var(--line)}
+.flg{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:17px;margin-bottom:12px}
+footer p{color:var(--mut);font-size:13.4px;line-height:1.65}
+.dis{margin-top:18px;padding-top:18px;border-top:1px solid var(--line);font-size:12.2px;color:#8696ab;max-width:600px;margin-left:auto;margin-right:auto}
+</style>
+</head>
+<body>
+
+<div class="demo">Демонстрационный проект — пример сайта автомойки. Компания вымышленная, услуги не оказываются.</div>
+
+<nav><div class="nv">
+  <div class="lg">
+    <svg width="25" height="25" viewBox="0 0 24 24" fill="none"><path d="M12 2.5c0 0 6.5 7 6.5 11.5a6.5 6.5 0 01-13 0C5.5 9.5 12 2.5 12 2.5z" fill="#0a84ff" fill-opacity=".2" stroke="#0a84ff" stroke-width="1.8"/><path d="M9.5 13.5a2.5 2.5 0 002.5 2.5" stroke="#0a84ff" stroke-width="1.8" stroke-linecap="round"/></svg>
+    AQSU <small>WASH</small>
+  </div>
+  <div class="nl"><a href="#price">Цены</a><a href="#why">Почему мы</a><a href="#loyal">Карта</a><a href="#zap">Контакты</a></div>
+  <a href="#zap" class="ncta">Записаться</a>
+</div></nav>
+
+<div class="hero"><div class="wrap hg">
+  <div>
+    <div class="pill"><div class="pd"></div> Сегодня свободно 6 слотов</div>
+    <h1>Мойка <i>по записи</i> — без очереди на 40 минут</h1>
+    <p class="hs">Приезжаете к своему времени, машина готова через 45 минут. Два бокса, бесконтактная мойка, химия Koch Chemie. Бостандыкский район, Алматы.</p>
+    <div class="hb">
+      <a href="#zap" class="bp">Выбрать время</a>
+      <a href="#price" class="bs">Посмотреть цены</a>
+    </div>
+    <div class="hf">
+      <div class="hfi">☕ Кофе пока ждёте</div>
+      <div class="hfi">⏱ 45 минут комплекс</div>
+      <div class="hfi">🧼 Без вихревых царапин</div>
+    </div>
+  </div>
+  <div class="slot-card">
+    <div class="sc-h">Запись на мойку</div>
+    <div class="sc-s">Выберите удобный день и время</div>
+    <div class="days">
+      <div class="day on"><b>Сб</b><span>сегодня</span></div>
+      <div class="day"><b>Вс</b><span>22 ноя</span></div>
+      <div class="day"><b>Пн</b><span>23 ноя</span></div>
+      <div class="day"><b>Вт</b><span>24 ноя</span></div>
+    </div>
+    <div class="slots">
+      <div class="sl off">09:00</div><div class="sl off">10:00</div><div class="sl">11:00</div><div class="sl">12:00</div>
+      <div class="sl on">13:00</div><div class="sl">14:00</div><div class="sl off">15:00</div><div class="sl">16:00</div>
+      <div class="sl">17:00</div><div class="sl">18:00</div><div class="sl">19:00</div><div class="sl off">20:00</div>
+    </div>
+    <button class="sc-b" onclick="document.getElementById('zap').scrollIntoView()">Записаться на 13:00</button>
+    <div class="sc-n">В реальном сайте занятые слоты закрываются автоматически, а заявка приходит вам в WhatsApp.</div>
+  </div>
+</div></div>
+
+<section id="price">
+<div class="wrap">
+  <div class="sh">
+    <div class="eb">Прайс</div>
+    <h2>Три комплекса, всё включено</h2>
+    <p>Никаких «а пылесос отдельно». Цена в прайсе — та, что вы заплатите на выезде.</p>
+  </div>
+  <div class="prc">
+    <div class="pc">
+      <h3>Экспресс</h3>
+      <p>Когда надо просто быстро и чисто</p>
+      <div class="pn">3 500 <small>₸</small></div>
+      <div class="pt">25 минут</div>
+      <ul>
+        <li>Бесконтактная мойка кузова</li>
+        <li>Мойка дисков и арок</li>
+        <li>Сушка микрофиброй</li>
+        <li>Протирка стёкол внутри</li>
+      </ul>
+      <a href="#zap" class="pb pb2">Записаться</a>
+    </div>
+    <div class="pc best">
+      <div class="bdg">БЕРУТ ЧАЩЕ ВСЕГО</div>
+      <h3>Комплекс</h3>
+      <p>Кузов и салон — полный порядок</p>
+      <div class="pn">5 000 <small>₸</small></div>
+      <div class="pt">45 минут</div>
+      <ul>
+        <li>Всё из «Экспресса»</li>
+        <li>Пылесос салона и багажника</li>
+        <li>Протирка пластика и панели</li>
+        <li>Чистка хрома и порогов</li>
+        <li>Чернение шин</li>
+        <li>Ароматизация салона</li>
+      </ul>
+      <a href="#zap" class="pb pb1">Записаться</a>
+    </div>
+    <div class="pc">
+      <h3>Комплекс + воск</h3>
+      <p>Перед поездкой или продажей</p>
+      <div class="pn">8 900 <small>₸</small></div>
+      <div class="pt">1 час 20 минут</div>
+      <ul>
+        <li>Всё из «Комплекса»</li>
+        <li>Жидкий воск на кузов</li>
+        <li>Антидождь на лобовое</li>
+        <li>Обработка кожи кондиционером</li>
+        <li>Мойка подкапотного пространства</li>
+      </ul>
+      <a href="#zap" class="pb pb2">Записаться</a>
+    </div>
+  </div>
+  <p class="cls">Цены для седана. Кроссовер +500 ₸, внедорожник и минивэн +1 000 ₸. Химчистка салона — от 28 000 ₸, по отдельной записи.</p>
+</div>
+</section>
+
+<section id="why" class="why">
+<div class="wrap">
+  <div class="sh">
+    <div class="eb">Почему к нам</div>
+    <h2>Четыре причины не ехать к гаражникам</h2>
+  </div>
+  <div class="wg">
+    <div class="wc">
+      <div class="wi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0a84ff" stroke-width="1.8"/><path d="M12 7.5V12l3 2" stroke="#0a84ff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <h4>Ровно ко времени</h4>
+      <p>Записываетесь на слот — заезжаете сразу. Не стоите за тремя машинами в субботу.</p>
+    </div>
+    <div class="wc">
+      <div class="wi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3.5v6c0 4.5-3 7.5-7 8.5-4-1-7-4-7-8.5v-6z" stroke="#0a84ff" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#0a84ff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <h4>Не царапаем лак</h4>
+      <p>Две фазы, отдельные губки на кузов и диски, микрофибра меняется после каждой машины.</p>
+    </div>
+    <div class="wc">
+      <div class="wi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#0a84ff" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="#0a84ff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <h4>Цена не растёт на выезде</h4>
+      <p>Что в прайсе — то и платите. Доплаты только если сами попросили что-то сверху.</p>
+    </div>
+    <div class="wc">
+      <div class="wi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M5 20V9l7-5 7 5v11" stroke="#0a84ff" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.5 20v-6h5v6" stroke="#0a84ff" stroke-width="1.8"/></svg></div>
+      <h4>Есть где подождать</h4>
+      <p>Тёплый зал, Wi-Fi, кофе бесплатно. Не надо гулять вокруг мойки 45 минут.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="loyal">
+<div class="wrap loy">
+  <div>
+    <div class="eb">Постоянным</div>
+    <h2>Каждая шестая мойка — бесплатно</h2>
+    <p style="color:var(--mut);font-size:16px;line-height:1.65;margin-bottom:22px">Никаких приложений и пластиковых карт. Мы отмечаем мойки по вашему номеру телефона — просто назовите его на кассе. Пять комплексов подряд, шестой за наш счёт.</p>
+    <p style="color:var(--mut);font-size:15px;line-height:1.6">Отметки не сгорают. Если приезжаете раз в месяц — всё равно дойдёте до бесплатной.</p>
+  </div>
+  <div class="stamps">
+    <div class="st done">✓</div><div class="st done">✓</div><div class="st done">✓</div>
+    <div class="st">4</div><div class="st">5</div><div class="st free">6-я бесплатно</div>
+  </div>
+</div>
+</section>
+
+<section id="zap" class="fs">
+<div class="wrap fg">
+  <div class="fi">
+    <div class="eb">Запись</div>
+    <h2>Забронируйте время</h2>
+    <p>Оставьте номер и удобное время — подтвердим в WhatsApp за пару минут. Если планы изменятся, просто напишите, слот освободим без вопросов.</p>
+    <div class="fr">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 5 5 5 9c0 5.5 7 13 7 13s7-7.5 7-13c0-4-3-7-7-7z" stroke="#0a84ff" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="#0a84ff" stroke-width="1.8"/></svg>
+      <div><b>Адрес</b><span>Алматы, Бостандыкский район (в демо условно)</span></div>
+    </div>
+    <div class="fr">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="17" rx="3" stroke="#0a84ff" stroke-width="1.8"/><path d="M8 2v4M16 2v4M3 10h18" stroke="#0a84ff" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <div><b>Часы работы</b><span>Ежедневно 09:00–20:00, без обеда</span></div>
+    </div>
+    <div class="fr">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M5 3h4l2 5-3 2a12 12 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z" stroke="#0a84ff" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <div><b>Телефон и WhatsApp</b><span>Здесь будет ваш номер</span></div>
+    </div>
+    <div class="fr">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3" stroke="#0a84ff" stroke-width="1.8"/><path d="M7 10h4M7 14h8" stroke="#0a84ff" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <div><b>Оплата</b><span>Kaspi QR, перевод, наличные</span></div>
+    </div>
+  </div>
+  <form id="f">
+    <div class="fl"><label for="n">Имя</label><input id="n" type="text" placeholder="Как к вам обращаться" required></div>
+    <div class="fl"><label for="t">Телефон</label><input id="t" type="tel" placeholder="+7 ___ ___ __ __" required></div>
+    <div class="fl"><label for="a">Машина</label><input id="a" type="text" placeholder="Например, Hyundai Tucson"></div>
+    <div class="fl"><label for="p">Комплекс</label>
+      <select id="p"><option>Комплекс — 5 000 ₸</option><option>Экспресс — 3 500 ₸</option><option>Комплекс + воск — 8 900 ₸</option><option>Химчистка салона — от 28 000 ₸</option></select>
+    </div>
+    <div class="fl"><label for="w">Удобное время</label>
+      <select id="w"><option>Сегодня, 13:00</option><option>Сегодня, вечером</option><option>Завтра, до обеда</option><option>Завтра, после обеда</option><option>Напишите мне, подберём</option></select>
+    </div>
+    <button type="submit" class="sb">Забронировать</button>
+    <div class="nt">Это демонстрационная форма — заявки никуда не отправляются.</div>
+    <div class="okm" id="ok">Готово. В реальном сайте бронь в этот момент уходит вам в WhatsApp, а слот закрывается для остальных.</div>
+  </form>
+</div>
+</section>
+
+<footer><div class="wrap">
+  <div class="flg">
+    <svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M12 2.5c0 0 6.5 7 6.5 11.5a6.5 6.5 0 01-13 0C5.5 9.5 12 2.5 12 2.5z" fill="#0a84ff" fill-opacity=".2" stroke="#0a84ff" stroke-width="1.8"/></svg>
+    AQSU WASH
+  </div>
+  <p>Автомойка по записи в Алматы · Комплексная мойка, химчистка, воск</p>
+  <p class="dis">Это демонстрационный пример сайта для автомойки. Компания AQSU WASH вымышлена, совпадения случайны, услуги не оказываются. Цены приведены как ориентир по рынку Алматы.</p>
+</div></footer>
+
+<script>
+document.querySelectorAll('.day').forEach(function(d){
+  d.addEventListener('click',function(){
+    document.querySelectorAll('.day').forEach(function(x){x.classList.remove('on')});
+    d.classList.add('on');
+  });
+});
+document.querySelectorAll('.sl').forEach(function(s){
+  if(s.classList.contains('off'))return;
+  s.addEventListener('click',function(){
+    document.querySelectorAll('.sl').forEach(function(x){x.classList.remove('on')});
+    s.classList.add('on');
+    document.querySelector('.sc-b').textContent='Записаться на '+s.textContent;
+  });
+});
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('ok').style.display='block';
+  this.querySelector('.sb').textContent='Бронь принята';
+});
+</script>
+</body>
+</html>
