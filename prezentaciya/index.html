@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пример презентации — коммерческое предложение</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#eef1f5;font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased;padding:30px 20px}
+.page{max-width:1120px;margin:0 auto}
+.ttl{text-align:center;margin-bottom:26px}
+.ttl h1{font-size:23px;font-weight:800;color:#14202e;letter-spacing:-.5px}
+.ttl p{font-size:14px;color:#64748b;margin-top:5px}
+.deck{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.s{aspect-ratio:16/9;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(20,32,46,.13);position:relative;background:#fff;padding:38px 42px;display:flex;flex-direction:column;justify-content:center}
+.num{position:absolute;bottom:14px;right:18px;font-size:11px;color:#94a3b8;font-weight:600}
+.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:12px}
+
+/* 1 — титул */
+.s1{background:linear-gradient(135deg,#0f2742,#1c4a7a)}
+.s1 .k{font-size:11px;letter-spacing:2.6px;color:#8fb8e0;font-weight:700;margin-bottom:16px}
+.s1 h2{font-size:38px;font-weight:800;color:#fff;letter-spacing:-1.2px;line-height:1.1}
+.s1 .sub{font-size:15px;color:#b9d2ea;margin-top:14px}
+.s1 .dt{position:absolute;bottom:34px;left:42px;font-size:12.5px;color:#7fa5cc}
+
+/* 2 — проблема */
+.s2 .eyebrow{color:#dc2626}
+.s2 h3{font-size:25px;font-weight:800;color:#14202e;letter-spacing:-.7px;margin-bottom:18px;line-height:1.2}
+.plist{display:flex;flex-direction:column;gap:10px}
+.pitem{display:flex;gap:11px;align-items:flex-start;font-size:14px;color:#44546a;line-height:1.45}
+.dot{width:7px;height:7px;border-radius:50%;background:#dc2626;flex-shrink:0;margin-top:6px}
+
+/* 3 — цифры */
+.s3{background:#14202e}
+.s3 .eyebrow{color:#5eead4}
+.s3 h3{font-size:21px;font-weight:700;color:#fff;margin-bottom:22px;letter-spacing:-.4px}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.n b{display:block;font-size:34px;font-weight:800;color:#5eead4;letter-spacing:-1.2px;line-height:1}
+.n span{font-size:12px;color:#94a3b8;display:block;margin-top:6px;line-height:1.35}
+
+/* 4 — как работаем */
+.s4 .eyebrow{color:#1c4a7a}
+.s4 h3{font-size:22px;font-weight:800;color:#14202e;margin-bottom:20px;letter-spacing:-.5px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.st{text-align:center}
+.stn{width:34px;height:34px;border-radius:50%;background:#1c4a7a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;margin:0 auto 9px}
+.st b{display:block;font-size:12.5px;font-weight:700;color:#14202e;margin-bottom:3px}
+.st span{font-size:11px;color:#64748b;line-height:1.35}
+
+/* 5 — тарифы */
+.s5 .eyebrow{color:#1c4a7a}
+.s5 h3{font-size:22px;font-weight:800;color:#14202e;margin-bottom:18px;letter-spacing:-.5px}
+.tar{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.t{border:1px solid #dbe3ec;border-radius:9px;padding:14px}
+.t.hot{border:2px solid #1c4a7a;background:#f4f8fc}
+.t b{display:block;font-size:13px;font-weight:700;color:#14202e;margin-bottom:7px}
+.t .pr{font-size:21px;font-weight:800;color:#1c4a7a;letter-spacing:-.6px}
+.t .pr small{font-size:11px;color:#64748b;font-weight:500}
+.t ul{list-style:none;margin-top:10px}
+.t li{font-size:11px;color:#55657a;padding:2.5px 0 2.5px 13px;position:relative;line-height:1.35}
+.t li::before{content:'';position:absolute;left:0;top:9px;width:7px;height:4px;border-left:1.6px solid #1c4a7a;border-bottom:1.6px solid #1c4a7a;transform:rotate(-45deg)}
+
+/* 6 — финал */
+.s6{background:linear-gradient(135deg,#1c4a7a,#0f2742);align-items:flex-start}
+.s6 h3{font-size:28px;font-weight:800;color:#fff;letter-spacing:-.9px;margin-bottom:12px;line-height:1.15}
+.s6 p{font-size:14px;color:#b9d2ea;line-height:1.5;margin-bottom:20px}
+.s6 .btn{display:inline-block;background:#fff;color:#0f2742;padding:11px 24px;border-radius:7px;font-size:13.5px;font-weight:700}
+@media(max-width:860px){.deck{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="ttl">
+    <h1>Пример презентации: коммерческое предложение</h1>
+    <p>Собрано за один вечер по короткому брифу заказчика</p>
+  </div>
+  <div class="deck">
+
+    <div class="s s1">
+      <div class="k">КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</div>
+      <h2>Клининг для офисов в Алматы</h2>
+      <div class="sub">Регулярная уборка без срывов и текучки персонала</div>
+      <div class="dt">Ноябрь 2026</div>
+      <div class="num">1</div>
+    </div>
+
+    <div class="s s2">
+      <div class="eyebrow">Проблема</div>
+      <h3>Почему офисы меняют клининг каждые полгода</h3>
+      <div class="plist">
+        <div class="pitem"><div class="dot"></div><div>Уборщица уволилась — замену ищут неделю, офис стоит грязный</div></div>
+        <div class="pitem"><div class="dot"></div><div>Качество падает через месяц: сначала моют, потом протирают</div></div>
+        <div class="pitem"><div class="dot"></div><div>Счёт приходит с доплатами, которых не было в договоре</div></div>
+        <div class="pitem"><div class="dot"></div><div>Никто не отвечает за пропажи и испорченную технику</div></div>
+      </div>
+      <div class="num">2</div>
+    </div>
+
+    <div class="s s3">
+      <div class="eyebrow">В цифрах</div>
+      <h3>Что это стоит компании</h3>
+      <div class="nums">
+        <div class="n"><b>4,2</b><span>дня в год офис без уборки из-за смены подрядчика</span></div>
+        <div class="n"><b>31%</b><span>сотрудников считают чистоту фактором комфорта</span></div>
+        <div class="n"><b>2,5×</b><span>переплата при срочном поиске замены</span></div>
+      </div>
+      <div class="num">3</div>
+    </div>
+
+    <div class="s s4">
+      <div class="eyebrow">Как мы работаем</div>
+      <h3>Четыре шага и фиксированный результат</h3>
+      <div class="steps">
+        <div class="st"><div class="stn">1</div><b>Замер</b><span>Приезжаем, считаем площадь и объём</span></div>
+        <div class="st"><div class="stn">2</div><b>Смета</b><span>Фиксируем цену на год вперёд</span></div>
+        <div class="st"><div class="stn">3</div><b>Бригада</b><span>Закрепляем людей за объектом</span></div>
+        <div class="st"><div class="stn">4</div><b>Контроль</b><span>Чек-лист и фотоотчёт каждый день</span></div>
+      </div>
+      <div class="num">4</div>
+    </div>
+
+    <div class="s s5">
+      <div class="eyebrow">Стоимость</div>
+      <h3>Три формата под размер офиса</h3>
+      <div class="tar">
+        <div class="t"><b>До 100 м²</b><div class="pr">90 000 <small>₸/мес</small></div><ul><li>5 раз в неделю</li><li>2 часа в день</li><li>Расходники наши</li></ul></div>
+        <div class="t hot"><b>100–300 м²</b><div class="pr">220 000 <small>₸/мес</small></div><ul><li>5 раз в неделю</li><li>4 часа в день</li><li>Мойка окон раз в месяц</li><li>Закреплённая бригада</li></ul></div>
+        <div class="t"><b>От 300 м²</b><div class="pr">от 380 000 <small>₸</small></div><ul><li>Ежедневно</li><li>Дневной дежурный</li><li>Химчистка мебели</li></ul></div>
+      </div>
+      <div class="num">5</div>
+    </div>
+
+    <div class="s s6">
+      <div class="eyebrow" style="color:#8fb8e0">Дальше</div>
+      <h3>Приедем на замер бесплатно</h3>
+      <p>Посмотрим объект, посчитаем точную смету и дадим две недели тестовой уборки. Не устроит — расходимся без обязательств.</p>
+      <div class="btn">Записаться на замер</div>
+      <div class="num">6</div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

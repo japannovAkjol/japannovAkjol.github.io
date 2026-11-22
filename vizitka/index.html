@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Айгерим — мастер маникюра в Алматы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fdfaf8;--card:#fff;--line:#eee0d8;--txt:#2e2622;--mut:#8a7a71;--acc:#c08a6e;--acc2:#e8cfc0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:Jost,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+.wrap{max-width:560px;margin:0 auto;padding:0 22px}
+.demo{background:#2e2622;color:#c3b2a8;padding:7px 18px;text-align:center;font-size:11.5px;letter-spacing:.2px}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+
+/* HERO */
+.hero{padding:44px 0 38px;text-align:center;position:relative;overflow:hidden}
+.blob{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(232,207,192,.5),transparent 68%);top:-180px;right:-150px;pointer-events:none}
+.ava{width:104px;height:104px;border-radius:50%;margin:0 auto 18px;background:linear-gradient(145deg,var(--acc2),var(--acc));display:flex;align-items:center;justify-content:center;font-size:40px;color:#fff;font-weight:600;font-family:'Cormorant Garamond',serif;box-shadow:0 10px 30px rgba(192,138,110,.28);position:relative}
+h1{font-size:34px;font-weight:700;letter-spacing:-.4px;margin-bottom:6px;position:relative}
+.role{font-size:15.5px;color:var(--mut);margin-bottom:20px;position:relative}
+.badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;position:relative}
+.bdg{font-size:12.5px;background:var(--card);border:1px solid var(--line);padding:6px 13px;border-radius:99px;color:#6b5a52}
+
+/* CTA */
+.cta{display:block;background:var(--acc);color:#fff;text-align:center;padding:16px;border-radius:14px;font-size:16px;font-weight:500;text-decoration:none;margin:26px 0 10px;box-shadow:0 8px 22px rgba(192,138,110,.3)}
+.cta-sub{text-align:center;font-size:13px;color:var(--mut)}
+
+section{padding:34px 0 10px}
+h2{font-size:25px;font-weight:700;margin-bottom:16px;text-align:center}
+
+/* PRICE */
+.price{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.prow{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.prow:last-child{border:none}
+.prow b{font-size:15.5px;font-weight:500;display:block}
+.prow small{font-size:12.5px;color:var(--mut)}
+.pv{font-size:16px;font-weight:600;color:var(--acc);white-space:nowrap}
+
+/* WORKS */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.w{aspect-ratio:1;border-radius:13px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.w svg{width:100%;height:100%}
+.ghint{text-align:center;font-size:12.5px;color:var(--mut);margin-top:12px}
+
+/* ABOUT */
+.about{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;font-size:15px;color:#4b3f39}
+.about p+p{margin-top:11px}
+
+/* INFO */
+.info{display:flex;flex-direction:column;gap:13px}
+.irow{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 17px}
+.irow svg{flex-shrink:0;margin-top:2px}
+.irow b{display:block;font-size:14.5px;font-weight:600;margin-bottom:1px}
+.irow span{font-size:14px;color:var(--mut)}
+
+footer{padding:34px 0 30px;text-align:center}
+.fname{font-size:21px;font-weight:700;margin-bottom:7px}
+footer p{font-size:13px;color:var(--mut);line-height:1.7}
+.dis{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;color:#a89a93}
+</style>
+</head>
+<body>
+
+<div class="demo">Демонстрационный пример сайта-визитки. Мастер вымышленный, записи не ведутся.</div>
+
+<div class="hero">
+  <div class="blob"></div>
+  <div class="wrap">
+    <div class="ava">А</div>
+    <h1 class="serif">Айгерим</h1>
+    <div class="role">Мастер маникюра · Алматы, Бостандыкский район</div>
+    <div class="badges">
+      <div class="bdg">6 лет опыта</div>
+      <div class="bdg">Стерильные инструменты</div>
+      <div class="bdg">Работаю одна</div>
+    </div>
+    <a href="#zapis" class="cta">Записаться</a>
+    <div class="cta-sub">Отвечаю в течение часа</div>
+  </div>
+</div>
+
+<section>
+<div class="wrap">
+  <h2 class="serif">Цены</h2>
+  <div class="price">
+    <div class="prow"><div><b>Маникюр с покрытием</b><small>гель-лак, 2 часа</small></div><div class="pv">9 000 ₸</div></div>
+    <div class="prow"><div><b>Маникюр без покрытия</b><small>1 час</small></div><div class="pv">5 000 ₸</div></div>
+    <div class="prow"><div><b>Наращивание</b><small>форма на выбор, 3 часа</small></div><div class="pv">15 000 ₸</div></div>
+    <div class="prow"><div><b>Снятие чужой работы</b><small>30 минут</small></div><div class="pv">2 000 ₸</div></div>
+    <div class="prow"><div><b>Дизайн</b><small>за ноготь</small></div><div class="pv">от 500 ₸</div></div>
+    <div class="prow"><div><b>Педикюр с покрытием</b><small>2 часа</small></div><div class="pv">12 000 ₸</div></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2 class="serif">Работы</h2>
+  <div class="grid">
+    <div class="w"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#f3e4da"/><ellipse cx="50" cy="52" rx="19" ry="27" fill="#d9a289"/><ellipse cx="50" cy="40" rx="13" ry="13" fill="#f0cdbb"/></svg></div>
+    <div class="w"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#efe6e2"/><ellipse cx="50" cy="52" rx="19" ry="27" fill="#b9918a"/><circle cx="50" cy="36" r="5" fill="#fff" fill-opacity=".8"/><circle cx="44" cy="46" r="3" fill="#fff" fill-opacity=".6"/></svg></div>
+    <div class="w"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#f6eee9"/><ellipse cx="50" cy="52" rx="19" ry="27" fill="#e0bcae"/><path d="M38 62h24" stroke="#b07b63" stroke-width="3"/></svg></div>
+    <div class="w"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#eee2e4"/><ellipse cx="50" cy="52" rx="19" ry="27" fill="#c99aa0"/><circle cx="50" cy="52" r="7" fill="#fff" fill-opacity=".5"/></svg></div>
+    <div class="w"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#f2ece2"/><ellipse cx="50" cy="52" rx="19" ry="27" fill="#cbb08b"/><path d="M40 44l20 16M60 44L40 60" stroke="#fff" stroke-opacity=".5" stroke-width="2"/></svg></div>
+    <div class="w"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#e9e6ea"/><ellipse cx="50" cy="52" rx="19" ry="27" fill="#a8a0b4"/><circle cx="50" cy="42" r="4" fill="#fff" fill-opacity=".7"/></svg></div>
+  </div>
+  <div class="ghint">Здесь будут ваши настоящие фото — 6–12 штук</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2 class="serif">Обо мне</h2>
+  <div class="about">
+    <p>Работаю маникюром шесть лет, принимаю у себя в студии по адресу в Бостандыкском районе. Одна смена — один клиент, никакой спешки и очереди за дверью.</p>
+    <p>Инструменты стерилизую в сухожаре, одноразовое выбрасываю при вас. Если покрытие слетело раньше двух недель — переделаю бесплатно.</p>
+  </div>
+</div>
+</section>
+
+<section id="zapis">
+<div class="wrap">
+  <h2 class="serif">Как записаться</h2>
+  <div class="info">
+    <div class="irow">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M5 3h4l2 5-3 2a12 12 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z" stroke="#c08a6e" stroke-width="1.7" stroke-linejoin="round"/></svg>
+      <div><b>Напишите в WhatsApp</b><span>Здесь будет ваш номер</span></div>
+    </div>
+    <div class="irow">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="17" rx="3" stroke="#c08a6e" stroke-width="1.7"/><path d="M8 2v4M16 2v4M3 10h18" stroke="#c08a6e" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <div><b>Часы приёма</b><span>Пн–Сб, 10:00–20:00. Воскресенье выходной</span></div>
+    </div>
+    <div class="irow">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 5 5 5 9c0 5.5 7 13 7 13s7-7.5 7-13c0-4-3-7-7-7z" stroke="#c08a6e" stroke-width="1.7"/><circle cx="12" cy="9" r="2.5" stroke="#c08a6e" stroke-width="1.7"/></svg>
+      <div><b>Адрес</b><span>Бостандыкский район, точный адрес пришлю при записи</span></div>
+    </div>
+    <div class="irow">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3" stroke="#c08a6e" stroke-width="1.7"/><path d="M7 10h4M7 14h8" stroke="#c08a6e" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <div><b>Оплата</b><span>Kaspi QR, перевод или наличные</span></div>
+    </div>
+  </div>
+  <a href="#" class="cta" onclick="return false">Написать и записаться</a>
+  <div class="cta-sub">Напишите удобный день — пришлю свободное время</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+  <div class="fname serif">Айгерим</div>
+  <p>Маникюр, педикюр, наращивание · Алматы</p>
+  <p class="dis">Демонстрационный пример сайта-визитки для частного мастера. Персонаж вымышлен, услуги не оказываются, цены приведены как ориентир по рынку Алматы.</p>
+</div>
+</footer>
+
+</body>
+</html>

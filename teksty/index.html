@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пример работы с текстом — до и после</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f4f6f9;font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased;padding:34px 20px;color:#14202e}
+.page{max-width:1080px;margin:0 auto}
+.ttl{text-align:center;margin-bottom:28px}
+.ttl h1{font-size:25px;font-weight:800;letter-spacing:-.6px}
+.ttl p{font-size:14.5px;color:#64748b;margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}
+.col{background:#fff;border-radius:13px;padding:24px 26px;border:1px solid #e2e8f0}
+.col.after{border:2px solid #15803d;background:#fbfffc}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1.4px;padding:5px 11px;border-radius:5px;margin-bottom:14px}
+.t-before{background:#fef2f2;color:#b91c1c}
+.t-after{background:#f0fdf4;color:#15803d}
+.col h3{font-size:16px;font-weight:700;margin-bottom:11px;letter-spacing:-.2px}
+.col p{font-size:14.3px;line-height:1.65;color:#3f4b5c}
+.col p+p{margin-top:9px}
+.col .muted{color:#8995a6}
+.why{background:#fff;border:1px solid #e2e8f0;border-radius:13px;padding:20px 24px;margin-bottom:26px}
+.why b{font-size:13.5px;font-weight:700;display:block;margin-bottom:9px}
+.why ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:7px 20px}
+.why li{font-size:13.3px;color:#55657a;padding-left:16px;position:relative;line-height:1.5}
+.why li::before{content:'';position:absolute;left:0;top:8px;width:8px;height:4px;border-left:2px solid #15803d;border-bottom:2px solid #15803d;transform:rotate(-45deg)}
+.foot{text-align:center;font-size:13px;color:#8995a6;padding-top:8px}
+@media(max-width:820px){.pair,.why ul{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="ttl">
+    <h1>Как меняется текст после правки</h1>
+    <p>Слева — то, что обычно пишут сами. Справа — то же самое, но читаемое</p>
+  </div>
+
+  <div class="pair">
+    <div class="col">
+      <div class="tag t-before">БЫЛО</div>
+      <h3>Описание услуги автосервиса</h3>
+      <p class="muted">Наша компания осуществляет комплексное предоставление услуг в сфере технического обслуживания автотранспортных средств. Мы используем исключительно качественные материалы и современное оборудование. Высококвалифицированные специалисты нашей компании с многолетним опытом работы гарантируют индивидуальный подход к каждому клиенту и оптимальное соотношение цены и качества.</p>
+    </div>
+    <div class="col after">
+      <div class="tag t-after">СТАЛО</div>
+      <h3>Описание услуги автосервиса</h3>
+      <p>Чиним подвеску, тормоза и двигатель. Перед работой называем точную сумму — в счёте не появится ничего, о чём вы не знали.</p>
+      <p>Одна машина — один мастер, он же отвечает на ваши вопросы. Диагностика занимает 40 минут, записываться не нужно.</p>
+    </div>
+  </div>
+
+  <div class="pair">
+    <div class="col">
+      <div class="tag t-before">БЫЛО</div>
+      <h3>Пост в Instagram у кондитера</h3>
+      <p class="muted">🎂✨ Доброе утро, мои дорогие! ✨🎂 Сегодня хочу показать вам невероятно вкусный и безумно красивый тортик, который я приготовила для прекрасной девушки на её День Рождения! 💕 Делала с душой и любовью! Пишите в директ за заказами! 🥰🙏 #торт #тортыалматы #вкусно</p>
+    </div>
+    <div class="col after">
+      <div class="tag t-after">СТАЛО</div>
+      <h3>Пост в Instagram у кондитера</h3>
+      <p>Этот торт заказали за четыре дня до праздника — обычно мне нужно семь, но тут успела.</p>
+      <p>Внутри — медовик со сметанным кремом, снаружи велюр. Два яруса, 4 кг, хватило на 25 человек.</p>
+      <p>Если у вас торжество в декабре — пишите сейчас, в декабре я закрываю заказы за две недели.</p>
+    </div>
+  </div>
+
+  <div class="why">
+    <b>Что изменилось</b>
+    <ul>
+      <li>Убраны слова, которые ничего не значат: «комплексный», «индивидуальный подход», «с душой»</li>
+      <li>Появились цифры: 40 минут, 4 кг, 25 человек, две недели</li>
+      <li>Текст отвечает на вопросы клиента, а не хвалит автора</li>
+      <li>В конце понятно, что делать дальше, без «пишите в директ 🥰»</li>
+      <li>Короткие абзацы — с телефона читается, а не пролистывается</li>
+      <li>Длина сократилась вдвое, смысла стало больше</li>
+    </ul>
+  </div>
+
+  <div class="foot">Пример работы. Тексты написаны специально для демонстрации, компании вымышленные.</div>
+</div>
+</body>
+</html>
